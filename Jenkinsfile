@@ -15,7 +15,8 @@ pipeline {
 	
 			stage("changing the permission"){
 			steps {
-				sh "sudo chown -R jenkins:jenkins /home/shahzebalam/github/test"
+				sh "cd /home/shahzebalam/github"
+				sh "sudo chown -R jenkins:jenkins test/"
 			}
 		}
 	
