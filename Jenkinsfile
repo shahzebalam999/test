@@ -11,5 +11,14 @@ pipeline {
 			
 			}
 		}
-	}	
+	}
+	
+	stages {
+		stage("changing the permission"){
+			steps {
+				sh "chown -R jenkins:jenkins /home/shahzebalam/github/test"
+			}
+		}
+	
+	}
 }
